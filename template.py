@@ -33,10 +33,8 @@ list_of_files = [
     ".dockerignore",
     "app.py",
     "Dockerfile",
-    "requirements.txt",
+    "requirements.txt", 
     "setup.py"
-
-
 ]
 
 
