@@ -35,3 +35,14 @@ MODEL_TRAINER_PRETRAINED_WEIGHT_NAME: str = "yolov5s.pt"
 MODEL_TRAINER_NO_EPOCHS: int = 1
 
 MODEL_TRAINER_BATCH_SIZE: int = 16
+
+
+"""
+MODEL PUSHER related constant start with MODEL_PUSHER var name
+"""
+BUCKET_NAME = "sign-lang-2024"
+S3_MODEL_NAME = "best.pt"
+
+SAVED_MODEL_DIR =os.path.join("saved_models")
+MODEL_PUSHER_DIR_NAME = "model_pusher"
+MODEL_PUSHER_SAVED_MODEL_DIR = SAVED_MODEL_DIR

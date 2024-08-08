@@ -53,3 +53,26 @@ class ModelTrainerConfig:
     no_epochs = MODEL_TRAINER_NO_EPOCHS
 
     batch_size = MODEL_TRAINER_BATCH_SIZE
+
+
+@dataclass
+class ModelPusherConfig:
+
+    model_trainer_dir: str = os.path.join(
+        training_pipeline_config.artifacts_dir, MODEL_PUSHER_DIR_NAME
+    )
+
+    model_file_path: str = os.path.join(model_trainer_dir, "best.pt")
+
+    timestamp = round(datetime.now().timestamp())
+
+    saved_model_path=os.path.join(
+        SAVED_MODEL_DIR,
+        f"{timestamp}",
+        "best.pt"
+    )
+
+
+
+    # BUCKET_NAME: str = BUCKET_NAME
+    # S3_MODEL_KEY_PATH: str = S3_MODEL_NAME
